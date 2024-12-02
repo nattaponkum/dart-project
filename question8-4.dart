@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main() {
+void main() async{
   // creating file object
   File file = File('sample.csv');
   // read file
@@ -9,4 +9,6 @@ void main() {
     // print file
     print(contents);
   });
+
+  String contents = await file.readAsString();
 }
